@@ -1,16 +1,27 @@
-import { Link } from 'react-router-dom';
-
-function Navbar() {
+export default function Navbar({ moduloActivo, setModuloActivo }) {
   return (
-    <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 2rem', backgroundColor: '#f5f5f5', alignItems: 'center' }}>
-      <h1 style={{ color: '#2e7d32', margin: 0 }}>TruequeVital</h1>
-      <div>
-        <Link to="/" style={{ marginRight: '1rem', textDecoration: 'none', color: '#333' }}>Inicio</Link>
-        <Link to="/login" style={{ marginRight: '1rem', textDecoration: 'none', color: '#333' }}>Ingresar</Link>
-        <Link to="/register" style={{ textDecoration: 'none', color: '#333' }}>Registrarse</Link>
+    <nav className="navbar">
+      <h2>TruequeVital</h2>
+      <div className="nav-buttons">
+        <button
+          className={moduloActivo === "catalogo" ? "activo" : ""}
+          onClick={() => setModuloActivo("catalogo")}
+        >
+          Catálogo
+        </button>
+        <button
+          className={moduloActivo === "publicar" ? "activo" : ""}
+          onClick={() => setModuloActivo("publicar")}
+        >
+          Publicar trueque
+        </button>
+        <button
+          className={moduloActivo === "mis-trueques" ? "activo" : ""}
+          onClick={() => setModuloActivo("mis-trueques")}
+        >
+          Mis trueques
+        </button>
       </div>
     </nav>
   );
 }
-
-export default Navbar;

@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Barra superior compacta */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: #f3f4f6;
+  padding: 9px 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #1f6e24;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-buttons button {
+  background: transparent;
+  border: none;
+  padding: 4px 6px;
+  font-size: 0.82rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-buttons button:hover {
+  color: #1f6e24;
+}
+
+.nav-buttons button.activo {
+  color: #1f6e24;
+  font-weight: 700;
+  border-bottom-color: #1f6e24;
+}
+
+/* Contenido principal compacto */
+.main-content {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 18px 16px;
+}
+
+.catalogo-encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.catalogo-encabezado h2,
+.main-content > section > h2 {
+  margin: 0 0 4px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.catalogo-encabezado select {
+  padding: 5px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #111827;
+  font-size: 0.8rem;
+}
+
+/* Tarjetas pequeñas */
+.grid-trueques {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.trueque-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  padding: 11px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trueque-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.badge {
+  background-color: #e6f4ea;
+  color: #1f6e24;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.estado {
+  font-size: 0.68rem;
+  color: #4b5563;
+  background-color: #eef2f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.trueque-card h3 {
+  margin: 2px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.trueque-card p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: #374151;
+}
+
+/* Formulario pequeño */
+.trueque-form {
+  max-width: 370px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.trueque-form h3 {
+  margin: 0 0 2px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  color: #111827;
+}
+
+.trueque-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.8rem;
+  color: #1f2937;
+}
+
+.trueque-form input,
+.trueque-form select {
+  padding: 6px 9px;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+  background-color: #ffffff;
+}
+
+.trueque-form input:focus,
+.trueque-form select:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+.trueque-form button {
+  margin-top: 4px;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.trueque-form button:hover {
+  background-color: #256628;
+}
+
+.mensaje-error {
+  margin: 0;
+  color: #dc2626;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.mensaje-exito {
+  margin: 0;
+  color: #1f6e24;
+  background-color: #e6f4ea;
+  padding: 6px 9px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
